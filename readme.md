@@ -20,6 +20,8 @@ The following Docker command can run the built Docker image:
 docker run -ti --name odalic -p 8080:8080 odalic:latest
 ```
 
+The Odalic UI can be now accessed from your favourite browser [here](http://localhost:8080/odalic-ui).
+
 If you want to access the odalic installation files and configuration, you must run the Odalic image in the detached mode:
 
 ```
