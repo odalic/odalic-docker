@@ -8,7 +8,7 @@ Please note, that Docker requires Hyper-V on Windows, so it cannot be installed 
 
 ## Useful Docker commands
 
-Please navigate to the dockerfile in your Docker console. You can build the Docker image by executing:
+To build Odalic Docker image, navigate to the dockerfile in your Docker console and execute:
 
 ```
 docker build --tag odalic:latest .
