@@ -38,4 +38,4 @@ Running a Docker image will create a Docker container. You can start/stop the cr
 docker start/stop odalic
 ```
 
-For more advanced command please refer to the [Docker documentation](https://docs.docker.com/engine/reference/commandline/cli/).
+For more advanced commands please refer to the [Docker documentation](https://docs.docker.com/engine/reference/commandline/cli/).
