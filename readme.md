@@ -20,7 +20,7 @@ The following Docker command can run the built Docker image:
 docker run -ti --name odalic -p 8080:8080 odalic:latest
 ```
 
-If you want to access the odalic installation files and configuration, you must run the odalic image in the detached mode:
+If you want to access the odalic installation files and configuration, you must run the Odalic image in the detached mode:
 
 ```
 docker run -d --name odalic -p 8080:8080 odalic:latest
@@ -32,10 +32,10 @@ You can then start Linux command line by executing:
 docker exec -ti odalic sh
 ```
 
-Starting a Docker image will create a Docker container. You can start/stop the created container like this:
+Running a Docker image will create a Docker container. You can start/stop the created container like this:
 
 ```
 docker start/stop odalic
 ```
 
-For mode advanced command please refer to the [Docker documentation](https://docs.docker.com/engine/reference/commandline/cli/).
+For more advanced command please refer to the [Docker documentation](https://docs.docker.com/engine/reference/commandline/cli/).
