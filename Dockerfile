@@ -8,22 +8,24 @@ RUN apk add openssl
 
 RUN mkdir ../resources
 
-RUN wget -O ../resources/odalic.war https://github.com/odalic/sti/releases/download/v1.1-alpha.1/odalic-1.1-SNAPSHOT.war
+RUN wget -O ../resources/odalic.war https://github.com/odalic/sti/releases/download/v1.1-alpha.4/odalic.war
 RUN mv -v ../resources/odalic.war webapps/odalic.war
 
-RUN wget -O ../resources/ocalic-ui.tar.gz https://github.com/odalic/odalic-ui/archive/v1.1-alpha.1.tar.gz
+RUN wget -O ../resources/ocalic-ui.tar.gz https://github.com/odalic/odalic-ui/archive/v1.1-alpha.4.tar.gz
 RUN tar -zxvf ../resources/ocalic-ui.tar.gz -C ../resources
-RUN mv ../resources/odalic-ui-1.1-alpha.1 webapps/odalic-ui
+RUN mv ../resources/odalic-ui-1.1-alpha.4 webapps/odalic-ui
 
-RUN wget -O ../resources/resources.tar.gz https://github.com/odalic/odalic-docker-repository/archive/1.1-alpha.1.tar.gz
+RUN wget -O ../resources/resources.tar.gz https://github.com/odalic/odalic-docker-repository/archive/v1.1-alpha.4.tar.gz
 RUN tar -zxvf ../resources/resources.tar.gz -C ../resources
 
-RUN mv ../resources/odalic-docker-repository-1.1-alpha.1/tomcat/bin/setenv.sh bin/setenv.sh
+RUN mv ../resources/odalic-docker-repository-1.1-alpha.4/* ../resources
+
+RUN mv ../resources/tomcat/bin/setenv.sh bin/setenv.sh
 RUN chmod 750 bin/setenv.sh
 
 RUN rm conf/context.xml
-RUN mv ../resources/odalic-docker-repository-1.1-alpha.1/tomcat/conf/context.xml conf/context.xml
+RUN mv ../resources/tomcat/conf/context.xml conf/context.xml
 
-RUN mv ../resources/odalic-docker-repository-1.1-alpha.1/odalic /usr/local/odalic
+RUN mv ../resources/odalic /usr/local/odalic
 
 RUN rm -rf ../resources
