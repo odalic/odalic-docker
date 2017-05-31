@@ -39,7 +39,7 @@ The Odalic UI can be now accessed from your favourite browser on [localhost:8080
 If you want to access the odalic installation files and configuration, you have to run the Odalic image in a detached mode:
 
 ```
-docker run -d --name odalic -p 8080:8080 odalic:latest
+docker run -d --name odalic --link localKB -p 8080:8080 odalic:latest
 ```
 
 You can then start the Linux command line by executing:
@@ -47,6 +47,25 @@ You can then start the Linux command line by executing:
 ```
 docker exec -ti odalic sh
 ```
+
+## Changing ports
+
+You can generally change a docker container port by changing the "-p" parameter:
+
+```
+-p 8080:[your local port]
+```
+
+You can freely change the local SPARQL endpoint port. It is only used when you access it directly over: [http://localhost:8890/sparql](http://localhost:8890/sparql).
+
+To change the Odalic port, you have to access the Odalic virtual machine and edit following files:
+
+```
+/usr/local/tomcat/webapps/odalic-ui/config.txt
+/usr/local/odalic/config/sti.properties
+```
+
+For more information please consult the Odalic documentation.
 
 ## Starting and stopping the Odalic container
 
