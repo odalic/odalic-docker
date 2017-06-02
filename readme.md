@@ -65,7 +65,7 @@ To change the Odalic port, you have to access the Odalic virtual machine and edi
 /usr/local/odalic/config/sti.properties
 ```
 
-For more information please consult the Odalic documentation.
+For more information please consult the Odalic documentation: [https://github.com/odalic/sti/releases/download/v1.1.1/ODALIC.Project.Documentation.pdf](https://github.com/odalic/sti/releases/download/v1.1.1/ODALIC.Project.Documentation.pdf).
 
 ## Starting and stopping the Odalic container
 
